@@ -3,204 +3,246 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ankita Bose | Application Security Portfolio</title>
+ <title>Ankita Bose | Application Security Portfolio</title>
 
   <meta name="description" content="Application Security Portfolio focusing on authorization flaws, business logic vulnerabilities, IAM privilege escalation, and executive-level security reporting.">
 
+  <!-- Embedded Executive CSS -->
   <style>
     body {
-      margin: 0;
       font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      background-color: #0f1117;
+      margin: 0;
+      padding: 0;
+      background-color: #0f172a;
       color: #e5e7eb;
       line-height: 1.6;
     }
 
-    a {
-      color: #7dd3fc;
-      text-decoration: none;
-    }
-
-    a:hover {
-      text-decoration: underline;
-    }
-
-    .container {
-      max-width: 1100px;
+    header, section {
+      max-width: 900px;
       margin: auto;
-      padding: 3rem 1.5rem;
+      padding: 60px 24px;
     }
 
     header {
-      border-bottom: 1px solid #1f2937;
-      padding-bottom: 2rem;
-      margin-bottom: 3rem;
+      padding-top: 80px;
     }
 
     h1 {
       font-size: 2.6rem;
-      margin-bottom: 0.3rem;
-    }
-
-    .tagline {
-      color: #9ca3af;
-      font-size: 1.1rem;
+      margin-bottom: 12px;
+      color: #f8fafc;
     }
 
     h2 {
-      font-size: 1.6rem;
-      margin-top: 3rem;
+      font-size: 1.9rem;
+      margin-top: 60px;
+      color: #f1f5f9;
       border-left: 4px solid #38bdf8;
       padding-left: 0.75rem;
+
     }
 
     h3 {
-      margin-top: 2rem;
-      font-size: 1.25rem;
+      margin-top: 24px;
+      font-size: 1.2rem;
+      color: #e2e8f0;
     }
 
-    .badges span {
-      display: inline-block;
-      background: #020617;
-      border: 1px solid #1f2937;
-      padding: 0.4rem 0.7rem;
-      margin: 0.4rem 0.4rem 0 0;
-      border-radius: 6px;
-      font-size: 0.85rem;
+    p {
+      color: #cbd5f5;
+      max-width: 780px;
     }
 
-    .project {
-      background: #020617;
-      border: 1px solid #1f2937;
-      border-radius: 12px;
-      padding: 1.6rem;
-      margin-top: 1.6rem;
+    .subtitle {
+      font-size: 1.2rem;
+      color: #93c5fd;
+      margin-bottom: 16px;
+    }
+
+    .summary {
+      max-width: 700px;
     }
 
     ul {
-      padding-left: 1.2rem;
+      margin-left: 20px;
+      max-width: 760px;
     }
 
+    li {
+      margin-bottom: 8px;
+    }
+
+    strong {
+      color: #f8fafc;
+    }
+
+    section {
+      border-top: 1px solid #1e293b;
+    }
+
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 2.1rem;
+      }
+
+      h2 {
+        font-size: 1.6rem;
+      }
     footer {
       border-top: 1px solid #1f2937;
       margin-top: 5rem;
       padding-top: 2rem;
       font-size: 0.9rem;
       color: #9ca3af;
+
+    }
     }
   </style>
 </head>
-
 <body>
-  <div class="container">
 
-    <!-- HEADER -->
-    <header>
-      <h1>Ankita Bose</h1>
+  <!-- HERO SECTION -->
+  <header id="hero">
+    <h1>Ankita Bose</h1>
       <p class="tagline">
-        Application Security Analyst · Web & API Pentesting · Authorization & IAM
+        Application Security & Cloud IAM Risk Analyst
       </p>
       <p>
         <a href="https://github.com/anzy009">GitHub</a> ·
       </p>
-    </header>
+    <p class="subtitle">
+      I identify authorization failures, cloud privilege escalation paths,
+      and detection blind spots before they become incidents.
+    </p>
+    <p class="summary">
+      My work focuses on broken access control, insecure design, and
+      authentication abuse — translating technical findings into
+      decisions engineering leaders can act on.
+    </p>
+  </header>
 
-    <!-- ABOUT -->
-    <section>
-      <h2>What I Do</h2>
-      <p>
-        I specialize in identifying <strong>authorization flaws</strong>, 
-        <strong>business logic vulnerabilities</strong>, and 
-        <strong>privilege escalation paths</strong> in web and cloud environments.
-        I approach security from a builder’s perspective, focusing on how real systems fail in production.
-      </p>
+  <!-- PROJECT 1 -->
+  <section id="broken-access-control">
+    <h2>Broken Access Control in Real Applications</h2>
+    <p><strong>OWASP Mapping:</strong> A01 – Broken Access Control, A04 – Insecure Design</p>
 
-      <div class="badges">
-        <span>Authorization Testing</span>
-        <span>Business Logic Abuse</span>
-        <span>API Security</span>
-        <span>AWS IAM Escalation</span>
-        <span>Security Reporting</span>
-      </div>
-    </section>
+    <p>
+      This project focuses on identifying authorization failures that occur
+      after authentication, including IDOR, horizontal privilege escalation,
+      and vertical privilege escalation.
+    </p>
 
-  
-    <!-- PROJECTS -->
-    <section>
-      <h2>Featured Security Projects</h2>
+    <h3>What I Did</h3>
+    <ul>
+      <li>Mapped role-based access assumptions against backend enforcement</li>
+      <li>Tested cross-user and cross-role resource access</li>
+      <li>Validated whether authorization checks were enforced server-side</li>
+    </ul>
 
-      <div class="project">
-        <h3>Detecting Brute-Force & Lateral Movement Using SIEM</h3>
-        <ul>
-          <li>Correlated failed and successful authentication attempts</li>
-          <li>Detected post-compromise lateral movement across hosts</li>
-          <li>Analyzed detection gaps and false-negative scenarios</li>
-        </ul>
-        <p><strong>Business Impact:</strong> Early detection of credential compromise before domain takeover.</p>
-      </div>
+    <h3>Key Security Insight</h3>
+    <p>
+      Authentication does not equal authorization. Most critical breaches
+      happen when systems trust authenticated users too much.
+    </p>
 
-      <div class="project">
-        <h3>Broken Access Control in Multi-Role Web Application</h3>
-        <ul>
-          <li>Vertical privilege escalation via missing server-side checks</li>
-          <li>Forced browsing and role confusion exploitation</li>
-          <li>Clear remediation guidance for developers</li>
-        </ul>
-        <p><strong>Business Impact:</strong> Unauthorized data access and account manipulation risk.</p>
-      </div>
+    <h3>Why a CTO Should Care</h3>
+    <p>
+      Broken access control is the leading cause of large-scale data exposure.
+      A single missed authorization check can expose customer data,
+      violate compliance requirements, and permanently damage trust.
+    </p>
+  </section>
 
-      <div class="project">
-        <h3>AWS IAM Privilege Escalation Assessment</h3>
-        <ul>
-          <li>Identified dangerous PassRole and policy combinations</li>
-          <li>Exploited trust relationships between services</li>
-          <li>Documented full attack chain and detection blind spots</li>
-        </ul>
-        <p><strong>Business Impact:</strong> Full cloud account compromise.</p>
-      </div>
+  <!-- PROJECT 2 -->
+  <section id="iam-privilege-escalation">
+    <h2>Cloud IAM Privilege Escalation Path Analysis</h2>
+    <p><strong>OWASP Mapping:</strong> A05 – Security Misconfiguration, A04 – Insecure Design</p>
 
-      <div class="project">
-        <h3>Executive-Level Security Risk Reporting</h3>
-        <ul>
-          <li>Translated technical findings into business language</li>
-          <li>Prioritized risks based on real-world impact</li>
-          <li>Provided remediation roadmap leadership can act on</li>
-        </ul>
-        <p><strong>Business Impact:</strong> Faster remediation and stakeholder buy-in.</p>
-      </div>
-    </section>
+    <p>
+      This project analyzes cloud IAM policies to identify indirect privilege
+      escalation paths created by permission combinations and misconfigured
+      trust relationships.
+    </p>
 
-    <!-- CERTIFICATIONS -->
-    <section>
-      <h2>Certifications & Formal Training</h2>
-      <div class="badges">
-        <span>PNPT</span>
-        <span>PWPA</span>
-        <span>PJPT</span>
-        <span>CEH Practical</span>
-        <span>Cisco Ethical Hacking</span>
-        <span>CS50x</span>
-        <span>CS50 Python</span>
-        <span>CS50 Web</span>
-        <span>Burp Suite Web Security Academy</span>
-      </div>
-    </section>
+    <h3>What I Did</h3>
+    <ul>
+      <li>Analyzed IAM policies as permission graphs rather than isolated rules</li>
+      <li>Mapped escalation paths involving PassRole, AssumeRole, and policy attachment</li>
+      <li>Identified full-account compromise paths without exploiting software flaws</li>
+    </ul>
 
-    <!-- PHILOSOPHY -->
-    <section>
-      <h2>Security Philosophy</h2>
-      <ul>
-        <li>Authorization failures cause more breaches than exploits</li>
-        <li>Business impact matters more than CVSS scores</li>
-        <li>Detection without context creates noise</li>
-        <li>Security findings must be understandable by leadership</li>
-      </ul>
-    </section>
+    <h3>Key Security Insight</h3>
+    <p>
+      Cloud breaches rarely require exploits. They succeed by abusing
+      configuration and design mistakes in identity systems.
+    </p>
+
+    <h3>Why a CTO Should Care</h3>
+    <p>
+      IAM failures can lead to total cloud account compromise.
+      These incidents are costly, difficult to detect early,
+      and often result in complete loss of control over production environments.
+    </p>
+  </section>
+
+  <!-- PROJECT 3 -->
+  <section id="credential-abuse-detection">
+    <h2>Credential Abuse & Authentication Failure Detection</h2>
+    <p><strong>OWASP Mapping:</strong> A07 – Identification and Authentication Failures, A09 – Security Logging and Monitoring Failures</p>
+
+    <p>
+      This project simulates real-world authentication traffic to detect
+      brute-force and credential-stuffing attacks that bypass basic rate
+      limiting and lockout controls.
+    </p>
+
+    <h3>What I Did</h3>
+    <ul>
+      <li>Correlated failed and successful login attempts over rolling time windows</li>
+      <li>Identified behavioral patterns instead of relying on static thresholds</li>
+      <li>Focused on detection gaps rather than password complexity rules</li>
+    </ul>
+
+    <h3>Key Security Insight</h3>
+    <p>
+      Credential abuse succeeds not because passwords are weak,
+      but because detection logic is shallow or nonexistent.
+    </p>
+
+    <h3>Why a CTO Should Care</h3>
+    <p>
+      Credential stuffing leads directly to account takeovers, fraud,
+      and customer trust loss. Early detection significantly reduces
+      incident scope and response costs.
+    </p>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section id="experience">
+    <h2>Security-Relevant Experience</h2>
+    <ul>
+      <li>Built and maintained web applications involving authentication and role-based access control</li>
+      <li>Taught technical subjects requiring structured explanation of complex systems</li>
+      <li>Produced technical content focused on clarity, risk communication, and decision-making</li>
+    </ul>
+  </section>
+
+  <!-- CERTIFICATIONS -->
+  <section id="certifications">
+    <h2>Certifications & Formal Training</h2>
+    <ul>
+      <li><strong>Application & Web Security:</strong> CEH Practical, Burp Suite Web Security Academy</li>
+      <li><strong>Hands-on Offense & Defense:</strong> PNPT, PJPT, PWPA</li>
+      <li><strong>Computer Science Foundations:</strong> CS50x, CS50 Python, CS50 Web</li>
+      <li><strong>Networking & Ethics:</strong> Cisco Ethical Hacking</li>
+    </ul>
+  </section>
 
     <footer>
       <p>© 2026 Ankita Bose · Application Security Portfolio</p>
     </footer>
 
-  </div>
+
 </body>
 </html>
