@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ankita Bose | Application Security Portfolio</title>
+
+  <meta name="description" content="Application Security Portfolio focusing on authorization flaws, business logic vulnerabilities, IAM privilege escalation, and executive-level security reporting.">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background-color: #0f1117;
+      color: #e5e7eb;
+      line-height: 1.6;
+    }
+
+    a {
+      color: #7dd3fc;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: auto;
+      padding: 3rem 1.5rem;
+    }
+
+    header {
+      border-bottom: 1px solid #1f2937;
+      padding-bottom: 2rem;
+      margin-bottom: 3rem;
+    }
+
+    h1 {
+      font-size: 2.6rem;
+      margin-bottom: 0.3rem;
+    }
+
+    .tagline {
+      color: #9ca3af;
+      font-size: 1.1rem;
+    }
+
+    h2 {
+      font-size: 1.6rem;
+      margin-top: 3rem;
+      border-left: 4px solid #38bdf8;
+      padding-left: 0.75rem;
+    }
+
+    h3 {
+      margin-top: 2rem;
+      font-size: 1.25rem;
+    }
+
+    .badges span {
+      display: inline-block;
+      background: #020617;
+      border: 1px solid #1f2937;
+      padding: 0.4rem 0.7rem;
+      margin: 0.4rem 0.4rem 0 0;
+      border-radius: 6px;
+      font-size: 0.85rem;
+    }
+
+    .project {
+      background: #020617;
+      border: 1px solid #1f2937;
+      border-radius: 12px;
+      padding: 1.6rem;
+      margin-top: 1.6rem;
+    }
+
+    ul {
+      padding-left: 1.2rem;
+    }
+
+    footer {
+      border-top: 1px solid #1f2937;
+      margin-top: 5rem;
+      padding-top: 2rem;
+      font-size: 0.9rem;
+      color: #9ca3af;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+
+    <!-- HEADER -->
+    <header>
+      <h1>Ankita Bose</h1>
+      <p class="tagline">
+        Application Security Analyst · Web & API Pentesting · Authorization & IAM
+      </p>
+      <p>
+        <a href="https://github.com/anzy009">GitHub</a> ·
+      </p>
+    </header>
+
+    <!-- ABOUT -->
+    <section>
+      <h2>What I Do</h2>
+      <p>
+        I specialize in identifying <strong>authorization flaws</strong>, 
+        <strong>business logic vulnerabilities</strong>, and 
+        <strong>privilege escalation paths</strong> in web and cloud environments.
+        I approach security from a builder’s perspective, focusing on how real systems fail in production.
+      </p>
+
+      <div class="badges">
+        <span>Authorization Testing</span>
+        <span>Business Logic Abuse</span>
+        <span>API Security</span>
+        <span>AWS IAM Escalation</span>
+        <span>Security Reporting</span>
+      </div>
+    </section>
+
+  
+    <!-- PROJECTS -->
+    <section>
+      <h2>Featured Security Projects</h2>
+
+      <div class="project">
+        <h3>Detecting Brute-Force & Lateral Movement Using SIEM</h3>
+        <ul>
+          <li>Correlated failed and successful authentication attempts</li>
+          <li>Detected post-compromise lateral movement across hosts</li>
+          <li>Analyzed detection gaps and false-negative scenarios</li>
+        </ul>
+        <p><strong>Business Impact:</strong> Early detection of credential compromise before domain takeover.</p>
+      </div>
+
+      <div class="project">
+        <h3>Broken Access Control in Multi-Role Web Application</h3>
+        <ul>
+          <li>Vertical privilege escalation via missing server-side checks</li>
+          <li>Forced browsing and role confusion exploitation</li>
+          <li>Clear remediation guidance for developers</li>
+        </ul>
+        <p><strong>Business Impact:</strong> Unauthorized data access and account manipulation risk.</p>
+      </div>
+
+      <div class="project">
+        <h3>AWS IAM Privilege Escalation Assessment</h3>
+        <ul>
+          <li>Identified dangerous PassRole and policy combinations</li>
+          <li>Exploited trust relationships between services</li>
+          <li>Documented full attack chain and detection blind spots</li>
+        </ul>
+        <p><strong>Business Impact:</strong> Full cloud account compromise.</p>
+      </div>
+
+      <div class="project">
+        <h3>Executive-Level Security Risk Reporting</h3>
+        <ul>
+          <li>Translated technical findings into business language</li>
+          <li>Prioritized risks based on real-world impact</li>
+          <li>Provided remediation roadmap leadership can act on</li>
+        </ul>
+        <p><strong>Business Impact:</strong> Faster remediation and stakeholder buy-in.</p>
+      </div>
+    </section>
+
+    <!-- CERTIFICATIONS -->
+    <section>
+      <h2>Certifications & Formal Training</h2>
+      <div class="badges">
+        <span>PNPT</span>
+        <span>PWPA</span>
+        <span>PJPT</span>
+        <span>CEH Practical</span>
+        <span>Cisco Ethical Hacking</span>
+        <span>CS50x</span>
+        <span>CS50 Python</span>
+        <span>CS50 Web</span>
+        <span>Burp Suite Web Security Academy</span>
+      </div>
+    </section>
+
+    <!-- PHILOSOPHY -->
+    <section>
+      <h2>Security Philosophy</h2>
+      <ul>
+        <li>Authorization failures cause more breaches than exploits</li>
+        <li>Business impact matters more than CVSS scores</li>
+        <li>Detection without context creates noise</li>
+        <li>Security findings must be understandable by leadership</li>
+      </ul>
+    </section>
+
+    <footer>
+      <p>© 2026 Ankita Bose · Application Security Portfolio</p>
+    </footer>
+
+  </div>
+</body>
+</html>
